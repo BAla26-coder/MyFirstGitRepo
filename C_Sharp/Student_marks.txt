@@ -1,0 +1,62 @@
+class Student
+{
+    public int RollNo { get; set; }
+    public string Name { get; set; }
+    public string Class { get; set; }
+    public int Semester { get; set; }
+    public string Branch { get; set; }
+    public int[] Marks { get; set; }
+
+    public Student(int rollNo, string name, string studentClass, int semester, string branch)
+    {
+        RollNo = rollNo;
+        Name = name;
+        Class = studentClass;
+        Semester = semester;
+        Branch = branch;
+        Marks = new int[5];
+    }
+
+    public void GetMarks(int m1, int m2, int m3, int m4, int m5)
+    {
+        Marks[0] = m1;
+        Marks[1] = m2;
+        Marks[2] = m3;
+        Marks[3] = m4;
+        Marks[4] = m5;
+    }
+
+    public void DisplayResult()
+    {
+        int totalMarks = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            totalMarks += Marks[i];
+            if (Marks[i] < 35)
+            {
+                Console.WriteLine("Failed");
+                return;
+            }
+        }
+
+        float avg = totalMarks / 5;
+        if (avg < 50)
+        {
+            Console.WriteLine("Failed");
+        }
+        else
+        {
+            Console.WriteLine("Passed");
+        }
+    }
+
+    public void DisplayData()
+    {
+        Console.WriteLine("Roll No: " + RollNo);
+        Console.WriteLine("Name: " + Name);
+        Console.WriteLine("Class: " + Class);
+        Console.WriteLine("Semester: " + Semester);
+        Console.WriteLine("Branch: " + Branch);
+        Console.WriteLine("Marks: " + string.Join(",", Marks));
+    }
+}

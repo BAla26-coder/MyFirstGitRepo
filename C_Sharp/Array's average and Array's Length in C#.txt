@@ -1,0 +1,31 @@
+using System;
+
+
+namespace MyProject
+{
+    class Arrays_Problem
+    {
+        static void Main(string[] args)
+        {
+            //Program to calculate the average of array elements.
+                  int[] arr = { 26,35,88,65,79,34 };
+
+                int i = 0;
+                int sum = 0;
+            float average;
+                
+                for (i = 0; i < arr.Length; i++)
+                {                                             //This loop Displays Array's Length
+                    sum += arr[i];
+                }
+
+                average = (float)sum / arr.Length;                  // This one Finds the Average
+
+                Console.WriteLine("Average of Array elements: " + average);
+
+
+
+               Console.Read();
+}
+    }
+}

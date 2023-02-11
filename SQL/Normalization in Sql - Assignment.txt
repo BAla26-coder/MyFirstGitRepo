@@ -1,0 +1,37 @@
+	Client Rental Unormalized Table into (1NF)	
+							
+ClientNo Customername	propertyno	address	        RentDate	 EndDate 	rent    OwnerName    ownerno		
+									
+CR76	John kay	PG4	 6 lawrence,st.glasgow	1-Jul-00	31-Aug-01	350	Tina Murphy   CO40
+CR76	John kay	PG16	5 novar Dr.glasgow	1-Sep-02	1-Sep-02	450	Tony Shaw     C093	
+CR56	Aline Stewan	PG4	6 lawrence,st.glasgow	1-Sep-99	10-Jun-00	350	Tina Murphy   C040		
+CR56	Aline Stewan	PG36	2 manor Rd,glasgow	10-Oct-00	3-Dec-01	370	Tony Shaw     C093		
+CR56	Aline Stewan	PG16	5 novar Dr.glasgow	1-Nov-02	1-Aug-01	450	Tony Shaw     C091
+
+
+       Client Rental Unormalized Table into (2NF)
+
+Cname          ClientNo
+	
+John Kay       CR76
+Aline Strewan   CR56	
+
+        
+ClientNo	propertyno     paddress                         rentstart      rentfinish      OwnerNo
+
+CR76	          PG4          lawrence,st.glasgow              1-Jul-00	31-Aug-01        CO40
+CR76		  PG16         5 novar Dr.glasgow               1-Sep-02	1-Sep-02         C093
+CR56		  PG4	       6 lawrence,st.glasgow	        1-Sep-99	10-Jun-00	 CO40
+CR56	  	  PG36         2 manor Rd,glasgow               10-Oct-00	3-Dec-01         C093
+CR56		  PG16         5 novar Dr.glasgow              	1-Nov-02        1-Aug-01         C091
+
+
+     		
+	
+	
+	
+		
+
+
+
+

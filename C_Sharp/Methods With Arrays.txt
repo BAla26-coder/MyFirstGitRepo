@@ -1,0 +1,48 @@
+using System;
+
+namespace MyProject
+{
+
+
+public class FunWithArrays
+{
+        static void Main(string[] args)
+        {
+            // Declare an array to store ten marks
+            int[] marks = new int[10];
+
+            // Initialize variables for sum, minimum, and maximum
+            int sum = 0;
+            int min = int.MaxValue;
+            int max = int.MinValue;
+
+            // Accept input for each mark
+            for (int i = 0; i < 10; i++)
+            {
+                Console.Write("Enter mark " + (i + 1) + ": ");
+                marks[i] = int.Parse(Console.ReadLine());
+
+                // Update sum, minimum, and maximum
+                sum += marks[i];
+                if (marks[i] < min)
+                {
+                    min = marks[i];
+                }
+                if (marks[i] > max)
+                {
+                    max = marks[i];
+                }
+            }
+
+            // Calculate average
+            double average = (double)sum / 10;
+
+            // Print results
+            Console.WriteLine("Total: " + sum);
+            Console.WriteLine("Average: " + average);
+            Console.WriteLine("Minimum: " + min);
+            Console.WriteLine("Maximum: " + max);
+            Console.Read();
+        }
+}
+}

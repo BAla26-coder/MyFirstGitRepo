@@ -1,0 +1,20 @@
+using System;
+
+
+
+
+namespace MyProject
+{
+    class Word_Length
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a Word or your name:");
+            string word = Console.ReadLine();
+
+            Console.WriteLine("User Entered Word: "+ word);
+            Console.WriteLine("User Entered word's Length: "+ word.Length);
+            Console.Read();
+        }
+    }
+}

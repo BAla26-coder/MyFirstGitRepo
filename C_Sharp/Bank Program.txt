@@ -1,0 +1,65 @@
+using System;
+
+namespace MyProject
+{
+    class Bank
+
+    {
+
+
+         public static void Main(string[] args)
+        {
+
+            double balance = 50000.00;
+            Console.WriteLine("Enter You Name");
+            string name = Console.ReadLine();
+
+
+            Console.WriteLine("Enter Your Account No:");
+            double Acc = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter The Type Of Account");
+            string AT = Console.ReadLine();
+
+            Console.WriteLine("Enter you Four Digit PIN");
+            int PIN = Convert.ToInt32(Console.ReadLine());
+
+            if (PIN == 2614)
+            {
+                Console.WriteLine("Welcome "+ name);
+
+            }
+            else
+            {
+                Console.WriteLine("INVALID PIN!!");
+            }
+
+
+            Console.WriteLine("Enter 1 to ShowBalance , 2 to Withdraw and 3 to Deposit");
+            int InputNo = Convert.ToInt32(Console.ReadLine());
+
+            if(InputNo ==1)
+            {
+                Console.WriteLine("Your Balance "+ balance);
+            }
+            else if(InputNo == 2)
+            {
+                Console.WriteLine("Enter WithDraw Amount:");
+                int wD = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Withdrawn Amount  "+ wD );
+                Console.WriteLine("Current Balance "+ (balance -wD));
+
+            }
+            else if(InputNo == 3)
+            {
+                Console.WriteLine("Enter the Amount You Want To Deposit");
+                int DA = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Deposited Amount: " + DA);
+                Console.WriteLine("Current Balance " + (balance + DA));
+            }
+
+            Console.Read();
+        }
+    }
+
+    }

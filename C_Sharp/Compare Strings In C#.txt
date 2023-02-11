@@ -1,0 +1,24 @@
+using System;
+
+namespace MyProject
+{
+
+
+public class Compare_String
+{
+        static void Main(string[] args) { 
+        Console.WriteLine("Enter first word:");
+        string word1 = Console.ReadLine();
+
+        Console.WriteLine("Enter second word:");
+        string word2 = Console.ReadLine();
+
+        if (word1 == word2) {
+            Console.WriteLine("The words are the same.");
+        } else {
+            Console.WriteLine("The words are not the same.");
+        }
+            Console.Read();
+        }
+}
+}

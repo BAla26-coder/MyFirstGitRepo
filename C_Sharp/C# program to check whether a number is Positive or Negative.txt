@@ -1,0 +1,28 @@
+using System;
+
+
+namespace MyProject
+{
+    class PositiveorNegative
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter a number");
+
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            if(number >= 0)
+            {
+                Console.WriteLine("The entered number is Positive!");
+
+            }
+            else
+            {
+                Console.WriteLine("The entered number is Negative!");
+            }
+
+            Console.Read();
+            
+        }
+    }
+}
