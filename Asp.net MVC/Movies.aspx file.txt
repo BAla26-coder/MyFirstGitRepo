@@ -1,0 +1,22 @@
+<connectionStrings>
+    <add name="MoviesDbConnection" connectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MoviesDB;Integrated Security=True;MultipleActiveResultSets=True;App=EntityFramework" providerName="System.Data.SqlClient" />
+</connectionStrings>
+
+using System.Data.Entity;
+using MoviesDB.Models;
+
+namespace MoviesDB
+{
+    public class MvcApplication : System.Web.HttpApplication
+    {
+        protected void Application_Start()
+        {
+            Database.SetInitializer(new CreateDatabaseIfNotExists<MoviesDbContext>());
+
+            using (var context = new MoviesDbContext())
+            {
+                context.Database.Initialize(false);
+            }
+        }
+    }
+}
